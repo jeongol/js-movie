@@ -1,7 +1,7 @@
 const API_KEY = '609d96fd9ad77dc5f8d4e2f536aece54';
 const URL = `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=1`;
 
-// api 호출
+ // api 호출 
 fetch(URL)
     .then(response => response.json())
     .then(data => {
@@ -33,14 +33,13 @@ function createMovieCard(movie) {
         <span>Rating: ${movie.vote_average}</span>
         `;
     card.addEventListener('click', () => alert(`Movie ID: ${movie.id}`));
-    return card; 
+    return card;
 }
 
-// 
+// 검색기능 구현하는법을 알아내지 못했습니다.
 document.getElementById('search-button').addEventListener('click', () => {
     const query = document.getElementById('search-input').value.toLowerCase();
-    const movieCards = document.querySelectorAll('.movie-card');
-    movieCards.forEach(card => {
+    const movieCards = document.querySelectorAll('.movie-card'); movieCards.forEach(card => {
         const title = card.querySelector('h3').textContent.toLowerCase();
         if (title.includes(query)) {
             card.style.display = 'block';
@@ -49,23 +48,4 @@ document.getElementById('search-button').addEventListener('click', () => {
         }
     });
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
