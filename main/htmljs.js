@@ -1,14 +1,6 @@
 const API_KEY = '609d96fd9ad77dc5f8d4e2f536aece54';
 const URL = `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=1`;
 
- // api 호출 
-fetch(URL)
-    .then(response => response.json())
-    .then(data => {
-        console.log(data);
-    })
-    .catch(error => console.error('Error:', error));
-
 // 받아온 데이터로 카드 생성 및 DOM에 추가
 fetch(URL)
     .then(response => response.json())
@@ -21,6 +13,9 @@ fetch(URL)
         });
     })
     .catch(error => console.error('Error:', error));
+
+const searchInput = document.querySelector("#search-input");
+searchInput.focus();
 
 // 영화 카드 ui 구현
 function createMovieCard(movie) {
@@ -44,8 +39,21 @@ document.getElementById('search-button').addEventListener('click', () => {
         if (title.includes(query)) {
             card.style.display = 'block';
         } else {
-            card.style.display = 'none';
+            carsd.style.display = 'none';
         }
     });
 });
 
+const movieCards = document.querySelectorAll(".movie-card");
+
+movieCards.forEach((card) => {
+    const title = card.querySelector(".movie-title").textContent.toLowerCase();
+    if (title.includes(searchKeyword)) {
+        card.style.display = "block";
+    } else {
+        card.style.display = "none";
+    }
+});
+
+const movies = [{ title: "제목1" }, { title: "제목2" }, { title: "제목3" }]
+const movieTitles = movies.map(movie => `<h1>${movie.title}</h1>`);

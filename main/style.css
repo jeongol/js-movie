@@ -14,39 +14,32 @@ header {
     border-bottom: 3px solid #ddd;
 }
 
-h1 {
-    margin: 0;
-    font-size: 50px;
+* {
+    box-sizing: border-box;
 }
 
-.movie-card {
+ul {
+    list-style-type: none;
+}
+
+input,
+button {
+    padding: 5px 10px;
+}
+
+#list {
+    border: 1px solid white;
+    padding: 20px;
     display: flex;
-    flex-direction: column;
-    width: calc(25% - 20px);
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-.movie-card img {
-    width: 100%;
-    height: auto;
+#list>li {
+    flex-basis: 48%;
+    margin-bottom: 20px;
 }
 
-.movie-card h3 {
-    margin: 10px;
-    font-size: 1.2em;
-}
-
-.movie-card p {
-    margin: 10px;
-    font-size: 0.9em;
-}
-
-.movie-card span {
-    margin: 10px;
-    font-size: 0.9em;
-    color: #555;
+#list>li>img {
+    width: 80%;
 }
