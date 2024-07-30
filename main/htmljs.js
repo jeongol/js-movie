@@ -31,7 +31,7 @@ function createMovieCard(movie) {
     return card;
 }
 
-// 검색기능 구현하는법을 알아내지 못했습니다.
+// 검색기능 구현하는법을 이해하지 못하고 알아내지 못했습니다.
 document.getElementById('search-button').addEventListener('click', () => {
     const query = document.getElementById('search-input').value.toLowerCase();
     const movieCards = document.querySelectorAll('.movie-card'); movieCards.forEach(card => {
