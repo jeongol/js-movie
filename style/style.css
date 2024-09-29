@@ -1,45 +1,51 @@
 body {
-    background-color: black;
-    color: white;
-    margin: 0;
-    font-family: Arial, sans-serif;
+  background-color: black;
+  color: white;
+  margin: 0;
+  font-family: Arial, sans-serif;
 }
 
 header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    background-color: #000000;
-    border-bottom: 3px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #000000;
+  border-bottom: 3px solid #ddd;
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 ul {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 input,
 button {
-    padding: 5px 10px;
+  padding: 5px 10px;
 }
 
 #list {
-    border: 1px solid white;
-    padding: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  border: 1px solid white;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-#list>li {
-    flex-basis: 48%;
-    margin-bottom: 20px;
+#list > li {
+  flex-basis: 48%;
+  margin-bottom: 20px;
 }
 
-#list>li>img {
-    width: 80%;
+#list > li > img {
+  width: 80%;
+}
+
+#card-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  list-style: none;
 }
