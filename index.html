@@ -6,15 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>내배캠 영화 프로젝트</title>
     <link rel="stylesheet" href="./style/style.css" />
-    <script type="module" src="./src/mian.js"></script>
+    <script type="module" src="./src/main.js"></script>
   </head>
 
   <body>
     <header>
-      <h1 class="title">One click movie</h1>
+      <h1 class="title">원 클릭 movie</h1>
       <form id="search-form">
-        <input type="text" id="search-input" placeholder="영화를 검색하세요" />
-        <button id="search-button">Search</button>
+        <input
+          class="inputtext"
+          type="text"
+          id="search-input"
+          placeholder="영화를 검색하세요!"
+        />
+        <button class="search" id="search-button">검색하기</button>
         <div id="movie-container"></div>
       </form>
     </header>
